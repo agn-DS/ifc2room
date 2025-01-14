@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/REVIT%20API-2020--22-blue?style=for-the-badge">
+  <img src="https://img.shields.io/badge/REVIT%20API-2020--24-blue?style=for-the-badge">
   <img src="https://img.shields.io/badge/PLATFORM-WINDOWS-blue?style=for-the-badge">
   <img src="https://img.shields.io/badge/.NET-4.8-blue?style=for-the-badge">
   <img src="https://img.shields.io/badge/LICENSE-AGPL%20v3-blue?style=for-the-badge">
@@ -7,7 +7,7 @@
 
 <p> <br> </p>
 
-# <img src="https://files.agn-group.com/index.php/s/cd34GtbLQ6GwMKn/preview"> 
+# <img src="https://drive.google.com/thumbnail?id=1SozQZWbn2irOZRCb7VGPOQ11ZCgmX4zt"> 
 agn Niederberghaus &amp; Partner GmbH - agn|apps - software@agn.de <br> 
 <br>
 ifc2room makes it possible to read architectural rooms (in the form of levels, room geometries, <br>
@@ -49,7 +49,7 @@ of the program run, Ifc2Room lists the converted, the unconverted and the over-c
 for checking purposes.
 
 ## Author
-<img src="https://files.agn-group.com/index.php/s/mkRLSCsWPRqZcNK/preview">
+<img src="https://drive.google.com/thumbnail?id=1Xs3aP3BvUqV2PQ8xz7s5uGdH_oR0kNrd">
 
 ## License
 This sample is licensed under the terms of the [AGPL-3.0 License](https://opensource.org/licenses/GPL-3.0). Please see the [LICENSE](https://github.com/agnBIM/ifc2room/blob/main/LICENSE) file for full details. <br>
