@@ -1,0 +1,102 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Common Properties -->
+  <PropertyGroup>
+    <RootNamespace>agn.ifc2revitRooms</RootNamespace>
+    <PlatformTarget>x64</PlatformTarget>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <PropertyGroup>
+      <AssemblyName>agn_ifc2room</AssemblyName>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Program Files\Autodesk\Revit REVIT$(RevitYear)\Revit.exe</StartProgram>
+    <StartArguments>/language DEU</StartArguments>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <SupportedPlatform Include="Windows" />
+  </ItemGroup>
+
+  <!-- Needed to remove obj file from compiling -->
+  <ItemGroup>
+    <Compile Remove="obj\**" />
+    <EmbeddedResource Remove="obj\**" />
+    <None Remove="obj\**" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Remove="bin\**" />
+    <EmbeddedResource Remove="bin\**" />
+    <None Remove="bin\**" />
+  </ItemGroup>
+
+  <!-- Abstracted Properties-->
+  <!-- Configurations/Defined Pre-compiler Flags -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>$(DefineConstants);REVIT$(RevitYear)</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>$(DefineConstants);REVIT$(RevitYear)</DefineConstants>
+  </PropertyGroup>
+
+    <PropertyGroup>
+        <StartAction>Program</StartAction>
+        <StartProgram>C:\Program Files\Autodesk\Revit $(RevitYear)\Revit.exe</StartProgram>
+        <StartArguments>/language DEU</StartArguments>
+    </PropertyGroup>
+
+    
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+  </Target>
+	
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+  </Target>
+  
+  <!-- Revit API References -->
+  <ItemGroup>
+    <Reference Include="AdWindows">
+      <HintPath>C:\Program Files\Autodesk\Revit $(RevitYear)\AdWindows.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPI">
+      <HintPath>C:\Program Files\Autodesk\Revit $(RevitYear)\RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>C:\Program Files\Autodesk\Revit $(RevitYear)\RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIIFC">
+      <HintPath>C:\Program Files\Autodesk\Revit $(RevitYear)\RevitAPIIFC.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+   <Reference Include="UIFrameworkServices">
+      <HintPath>C:\Program Files\Autodesk\Revit $(RevitYear)\UIFrameworkServices.dll</HintPath>
+      <Private>False</Private>
+    </Reference>	
+	<Reference Include="RevitAPIMacros">
+      <HintPath>C:\Program Files\Autodesk\Revit $(RevitYear)\RevitAPIMacros.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+	<Reference Include="DynamoCore">
+      <HintPath>C:\Program Files\Autodesk\Revit $(RevitYear)\AddIns\DynamoForRevit\DynamoCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>	    
+	 <Reference Include="DynamoRevitDS">
+      <HintPath>C:\Program Files\Autodesk\Revit $(RevitYear)\AddIns\DynamoForRevit\Revit\DynamoRevitDS.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PolyBoolCS" Condition="'$(TargetFramework)'=='net481'">
+      <HintPath>..\..\PolyBoolCS\PolyBoolCS\bin\Debug\net48\PolyBoolCS.dll</HintPath>
+    </Reference>
+    <Reference Include="PolyBoolCS" Condition="'$(TargetFramework)'=='net8.0-windows'">
+      <HintPath>..\..\PolyBoolCS\PolyBoolCS\bin\Debug\net8.0-windows\win-x64\PolyBoolCS.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  
+</Project>
