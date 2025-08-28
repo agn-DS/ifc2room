@@ -150,6 +150,7 @@ namespace agn.ifc2revitRooms
                             string instanceLevel = "";
                             string roomName = "";
                             string roomNumber = "";
+                            string globalIdTemp = "";
 
                             //get the element properties
                             IEnumerable<IIfcPropertySingleValue> properties = product.IsDefinedBy.Where(r => r.RelatingPropertyDefinition is IIfcPropertySet).SelectMany(r => ((IIfcPropertySet)r.RelatingPropertyDefinition).HasProperties).OfType<IIfcPropertySingleValue>();
@@ -163,7 +164,7 @@ namespace agn.ifc2revitRooms
                                 //set name and number in instance from ifcparam
                                 roomName = param.LongName;
                                 roomNumber = product.Name;
-                                var globalId = product.GlobalId.ToString();
+                                globalIdTemp = product.GlobalId.ToString();
                             }
                             else
                             {
@@ -173,7 +174,7 @@ namespace agn.ifc2revitRooms
                                 //set name and number in instance from ifcparam
                                 roomName = param.LongName;
                                 roomNumber = product.Name;
-                                var globalId = product.GlobalId.ToString();
+                                globalIdTemp = product.GlobalId.ToString();
                             }
                             
 
@@ -187,7 +188,7 @@ namespace agn.ifc2revitRooms
 
 #endif
 
-                            roomList.Add(new IfcRooms(roomName, roomNumber, instanceLevel, curves, triCentroid, roomHeight, globalId));
+                            roomList.Add(new IfcRooms(roomName, roomNumber, instanceLevel, curves, triCentroid, roomHeight, globalIdTemp));
 
                         }
                         catch 
