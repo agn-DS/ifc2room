@@ -1,7 +1,8 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/REVIT%20API-2020--24-blue?style=for-the-badge">
+  <img src="https://img.shields.io/badge/REVIT%20API-2021--26-blue?style=for-the-badge">
   <img src="https://img.shields.io/badge/PLATFORM-WINDOWS-blue?style=for-the-badge">
   <img src="https://img.shields.io/badge/.NET-4.8-blue?style=for-the-badge">
+  <img src="https://img.shields.io/badge/.NET-8-blue?style=for-the-badge">
   <img src="https://img.shields.io/badge/LICENSE-AGPL%20v3-blue?style=for-the-badge">
 </p>
 
@@ -26,10 +27,10 @@ When you start Revit for the first time, you will be prompted to load the tool o
 Please confirm your selection.
 To uninstall this App, exit the Revit if you are currently running it, simply rerun the installer, and select
 the "Uninstall" button. OR, click Control Panel > Programs > Programs and Features (Windows
-7/8.1/10) and uninstall as you would any other application from your system.
+7/8.1/10/11) and uninstall as you would any other application from your system.
 
 ## Usage Instructions
-1.) Open an empty Revit file (version 2020, 2021, 2022). <br>
+1.) Open an empty Revit file (version 2021, 2022, 2023, 2024, 2025, 2026). <br>
 Caution: The app deletes all levels (and the associated views) from the underlying Revit file and <br>
 then creates new levels based on the Ifc file. <br>
 2.) Start the program. <br>
