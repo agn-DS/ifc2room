@@ -86,7 +86,12 @@ namespace agn.ifc2revitRooms
 
                 if (TaskDialogResult.CommandLink1 == tResult)
                 {
-                    System.Diagnostics.Process.Start(logfilePath);
+                    System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+                    {
+                        FileName = logfilePath,
+                        UseShellExecute = true,
+                        Verb = "open"
+                    });
                 }
             }
         }
