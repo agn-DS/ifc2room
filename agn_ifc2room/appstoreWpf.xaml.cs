@@ -1,4 +1,4 @@
-﻿// Copyright (C) by agn Niederberghaus & Partner GmbH
+// Copyright (C) by agn Niederberghaus & Partner GmbH
 // provided by agn|apps - software@agn.de
 // Gerrit Maedge; Torsten Moehlenhoff; Mario Billep
 
@@ -53,7 +53,7 @@ namespace agn.ifc2revitRooms
         {
             try
             {
-                if (comboViewFam.SelectedItem != null & System.IO.File.Exists(agnWpfPath.Text) & System.IO.Path.GetExtension(agnWpfPath.Text) == ".ifc")
+                if (comboViewFam.SelectedItem != null & System.IO.File.Exists(agnWpfPath.Text) & string.Equals(System.IO.Path.GetExtension(agnWpfPath.Text), ".ifc", StringComparison.OrdinalIgnoreCase))
                 {
                     viewFam = viewFamTypeList[comboViewFam.SelectedItem.ToString()];
                     filename = agnWpfPath.Text;
